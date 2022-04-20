@@ -11,7 +11,7 @@ fun selectionSort(array: Array<Int>): Array<Int> {
         for (j in i + 1 until arr.size) {
             if (arr[j] < min) {
                 min = arr[j]
-                indexOfMin = j;
+                indexOfMin = j
             }
         }
         if (i != indexOfMin) {
