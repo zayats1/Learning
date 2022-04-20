@@ -6,8 +6,8 @@ fun selectionSort(array: Array<Int>): Array<Int> {
     val arr = array.clone()
 
     for (i in arr.indices) {
-        var min = arr[i];
-        var indexOfMin = i;
+        var min = arr[i]
+        var indexOfMin = i
         for (j in i + 1 until arr.size) {
             if (arr[j] < min) {
                 min = arr[j]
