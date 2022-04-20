@@ -24,10 +24,9 @@ fun selectionSort(array: Array<Int>): Array<Int> {
 
 fun exchangeSort(array: Array<Int>): Array<Int> {  // bubble sort
     val arr = array.clone()
-
     for (i in arr.indices) {
         for (j in i + 1 until arr.size) {
-            if (arr[i] > arr[j]) {
+            if (arr[j] < arr[i]) {
                 arr[i] = arr[j].also { arr[j] = arr[i] }
             }
         }
