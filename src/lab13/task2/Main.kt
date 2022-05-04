@@ -1,32 +1,32 @@
 package lab13.task2
 
-import java.awt.BorderLayout
-import java.awt.BorderLayout.*
 import java.awt.Dimension
+import java.awt.FlowLayout
 import javax.swing.JButton
 import javax.swing.JFrame
+import javax.swing.JPanel
+
+const val BUTTON_COUNT = 10
 
 
 class MyFrame
     () : JFrame() {
     init {
         title = "Task2"
-        layout = BorderLayout()
+        layout = FlowLayout()
         isVisible = true
 
-        val myButtons = Array<JButton>(5) { i -> JButton("Button$i") }
+        val myPanel = JPanel()
+        add(myPanel)
+
+        val myButtons = Array(BUTTON_COUNT) { i -> JButton("Button$i") }
+
         for (butt in myButtons) {
             butt.preferredSize = Dimension(100, 100)
+            myPanel.add(butt)
         }
 
-        add(myButtons[0], NORTH)
-        add(myButtons[1], WEST)
-        add(myButtons[2], CENTER)
-        add(myButtons[3], EAST)
-        add(myButtons[4], SOUTH)
-
-
-        setSize(500, 400)
+        setSize(1100, 200)
     }
 }
 
