@@ -17,6 +17,5 @@ fun main() {
     val myButton = JButton("Butt")
     myButton.setBounds(130, 100, 100, 40);
 
-
     programFrame.add(myButton)
 }
